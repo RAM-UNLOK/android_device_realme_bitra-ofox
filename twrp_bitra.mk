@@ -31,7 +31,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := bitra
 PRODUCT_NAME := twrp_bitra
 PRODUCT_BRAND := Realme
-PRODUCT_MODEL := GT Neo 2
+PRODUCT_MODEL := RMX3370
 PRODUCT_MANUFACTURER := Realme
 
 # HACK: Set vendor patch level

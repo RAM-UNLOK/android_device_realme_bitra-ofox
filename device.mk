@@ -23,9 +23,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Userdata
 PRODUCT_FS_COMPRESSION := 1
+OF_ENABLE_FS_COMPRESSION := 1
 
 # Dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Fastbootd stuff
 PRODUCT_PACKAGES += \
@@ -58,4 +62,4 @@ PRODUCT_PACKAGES += \
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
 
 # Add TW_DEVICE_VERSION
-TW_DEVICE_VERSION := by SathamHussainM
+TW_DEVICE_VERSION := by RAM-UNLOK

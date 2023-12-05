@@ -1,3 +1,9 @@
+To initialize your local repository, use a command like this:
+
+```bash
+git clone https://github.com/RAM-UNLOK/android_device_realme_bitra-ofox.git -b android-14 device/realme/bitra
+```
+
 ## Device specifications
 
 | Device                  | Realme GT Neo 2 (5G)                                        |
