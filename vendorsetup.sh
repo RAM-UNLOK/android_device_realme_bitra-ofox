@@ -45,9 +45,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# Fox-specific flags
 	export OF_USE_GREEN_LED=0
 	export FOX_RESET_SETTINGS=1
+	export FOX_ENABLE_APP_MANAGER=0
 
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
-	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 
 	export FOX_USE_BASH_SHELL=1
@@ -57,16 +57,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_ZIP_BINARY=1
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_XZ_UTILS=1
-	export FOX_REPLACE_BUSYBOX_PS=1
-	export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
-	export FOX_REPLACE_TOOLBOX_GETPROP=1
-	export OF_FBE_METADATA_MOUNT_IGNORE=1
+	export OF_ENABLE_LPTOOLS=1
 
 #	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-	export OF_USE_SYSTEM_FINGERPRINT=1
+
 	export OF_DEFAULT_KEYMASTER_VERSION=4.1
 	# run a process after formatting data to recreate /data/media/0 (only when forced-encryption is being disabled)
 	export OF_RUN_POST_FORMAT_PROCESS=1
+	export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
 
 	#Addons
 	#export FOX_DELETE_INITD_ADDON=1 # !- Causes bootloops sometimes -!
@@ -77,19 +75,17 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	#Magiskboot
 	export OF_USE_MAGISKBOOT=1
-	export OF_USE_NEW_MAGISKBOOT=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 
 	# OTA & MIUI
 	# vanilla build
     export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
-	export OF_KEEP_DM_VERITY=1
 	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-	export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
+
 	 # dispense with the entire OTA menu
-	export OF_DISABLE_OTA_MENU=1
 	export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
+
 	# OTA for custom ROMs
 	export OF_SUPPORT_ALL_PAYLOAD_OTA_UPDATES=1
 	export OF_NO_MIUI_PATCH_WARNING=1
@@ -114,7 +110,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_BUILD_TYPE="STABLE"
 	export FOX_VERSION=R12.1_A14
 	export OF_MAINTAINER="OMKAR-PARTE"
-	export FOX_VARIANT=RUI
+	export FOX_VARIANT=RUI-AOSP
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/device/realme/bitra/Magisk/Magisk-Delta.zip
 
 	# let's see what are our build VARs
