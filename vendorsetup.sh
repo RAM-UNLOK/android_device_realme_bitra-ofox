@@ -46,8 +46,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_GREEN_LED=0
 	export FOX_RESET_SETTINGS=1
 	export FOX_ENABLE_APP_MANAGER=0
-
-	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
+	
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 
 	export FOX_USE_BASH_SHELL=1
@@ -56,6 +55,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TAR_BINARY=1
 	export FOX_USE_ZIP_BINARY=1
 	export FOX_USE_SED_BINARY=1
+	export FOX_USE_ZSTD_BINARY=1
+	export FOX_USE_LZ4_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 
@@ -76,6 +77,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	#Magiskboot
 	export OF_USE_MAGISKBOOT=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+	export FOX_USE_UPDATED_MAGISKBOOT=1
 
 	# OTA & MIUI
 	# vanilla build
@@ -103,7 +105,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=0
 	export OF_QUICK_BACKUP_LIST="/boot;/data;/persist;"
 	export OF_PATCH_AVB20=1
-	export FOX_DELETE_AROMAFM=1
 	# -- end R12.1 settings --
 
 	# Realme specific
